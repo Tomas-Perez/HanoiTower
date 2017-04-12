@@ -6,18 +6,39 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.sun.media.jfxmedia.events.NewFrameEvent;
+
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.util.ArrayList;
+import java.util.Stack;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class View extends JFrame {
-
+	private JPanel oneone;
+	private JPanel onetwo;
+	private JPanel onethree;
+	private JPanel onefour;
+	private JPanel twoone;
+	private JPanel twotwo;
+	private JPanel twothree;
+	private JPanel twofour;
+	private JPanel threeone;
+	private JPanel threetwo;
+	private JPanel threethree;
+	private JPanel threefour;
+	
+	
+	
+	
 	private JPanel contentPane;
 
 	/**
@@ -43,53 +64,53 @@ public class View extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		JPanel onethree = new JPanel();
+		onethree = new JPanel();
 		onethree.setBorder(new EmptyBorder(0, 0, 0, 0));
 		onethree.setBackground(Color.ORANGE);
 		
-		JPanel onefour = new JPanel();
+		onefour = new JPanel();
 		onefour.setBorder(new EmptyBorder(0, 0, 0, 0));
 		onefour.setBackground(Color.YELLOW);
 		
 		JButton btnNextStep = new JButton("Next step");
 		
-		JPanel onetwo = new JPanel();
+		onetwo = new JPanel();
 		onetwo.setBorder(new EmptyBorder(0, 0, 0, 0));
 		onetwo.setBackground(Color.RED);
 		
-		JPanel oneone = new JPanel();
+		oneone = new JPanel();
 		oneone.setBorder(new EmptyBorder(0, 0, 0, 0));
 		oneone.setBackground(Color.BLUE);
 		
-		JPanel twofour = new JPanel();
+		twofour = new JPanel();
 		twofour.setBorder(new EmptyBorder(0, 0, 0, 0));
 		twofour.setBackground(Color.YELLOW);
 		
-		JPanel twothree = new JPanel();
+		twothree = new JPanel();
 		twothree.setBorder(new EmptyBorder(0, 0, 0, 0));
 		twothree.setBackground(Color.ORANGE);
 		
-		JPanel twotwo = new JPanel();
+		twotwo = new JPanel();
 		twotwo.setBorder(new EmptyBorder(0, 0, 0, 0));
 		twotwo.setBackground(Color.RED);
 		
-		JPanel twoone = new JPanel();
+		twoone = new JPanel();
 		twoone.setBorder(new EmptyBorder(0, 0, 0, 0));
 		twoone.setBackground(Color.BLUE);
 		
-		JPanel panel_8 = new JPanel();
-		panel_8.setBorder(new EmptyBorder(0, 0, 0, 0));
-		panel_8.setBackground(Color.YELLOW);
+		threefour = new JPanel();
+		threefour.setBorder(new EmptyBorder(0, 0, 0, 0));
+		threefour.setBackground(Color.YELLOW);
 		
-		JPanel panel_9 = new JPanel();
-		panel_9.setBorder(new EmptyBorder(0, 0, 0, 0));
-		panel_9.setBackground(Color.ORANGE);
+		threethree = new JPanel();
+		threethree.setBorder(new EmptyBorder(0, 0, 0, 0));
+		threethree.setBackground(Color.ORANGE);
 		
-		JPanel panel_10 = new JPanel();
-		panel_10.setBorder(new EmptyBorder(0, 0, 0, 0));
-		panel_10.setBackground(Color.RED);
+		threetwo = new JPanel();
+		threetwo.setBorder(new EmptyBorder(0, 0, 0, 0));
+		threetwo.setBackground(Color.RED);
 		
-		JPanel threeone = new JPanel();
+		threeone = new JPanel();
 		threeone.setBorder(new EmptyBorder(0, 0, 0, 0));
 		threeone.setBackground(Color.BLUE);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -132,11 +153,11 @@ public class View extends JFrame {
 							.addComponent(threeone, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(26)
-							.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE))
+							.addComponent(threetwo, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(14)
-							.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
-						.addComponent(panel_8, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE))
+							.addComponent(threethree, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
+						.addComponent(threefour, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(98, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(430, Short.MAX_VALUE)
@@ -151,11 +172,11 @@ public class View extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(threeone, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
-							.addComponent(panel_10, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
+							.addComponent(threetwo, GroupLayout.PREFERRED_SIZE, 19, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
-							.addComponent(panel_9, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+							.addComponent(threethree, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
-							.addComponent(panel_8, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
+							.addComponent(threefour, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(twoone, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
 							.addGap(6)
@@ -182,9 +203,11 @@ public class View extends JFrame {
 		setResizable(false);
 		setVisible(true);
 	}
-}}
-	public void display(ArrayList<Stack>) {
-		
+
+	public void display(ArrayList<Stack<Integer>> newDiscs) {
+		oneone.setVisible(false);
+		onetwo.setBackground(Color.blue);
+		onetwo.setSize(new Dimension(3, 23));
 	}
 
 }
