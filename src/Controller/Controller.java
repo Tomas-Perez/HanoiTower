@@ -19,6 +19,7 @@ public class Controller {
     public class NextStep implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            solver.nextStep();
             ArrayList<Stack<Integer>> discs = solver.getDiscs();
             view.display(discs);
         }
