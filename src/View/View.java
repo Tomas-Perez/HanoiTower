@@ -13,6 +13,7 @@ import java.awt.GridBagLayout;
 import javax.swing.JButton;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Stack;
 import java.awt.Color;
@@ -35,7 +36,7 @@ public class View extends JFrame {
 	private JPanel threetwo;
 	private JPanel threethree;
 	private JPanel threefour;
-	
+	private JButton nextButton;
 	
 	
 	
@@ -72,7 +73,7 @@ public class View extends JFrame {
 		onefour.setBorder(new EmptyBorder(0, 0, 0, 0));
 		onefour.setBackground(Color.YELLOW);
 		
-		JButton btnNextStep = new JButton("Next step");
+		nextButton = new JButton("Next step");
 		
 		onetwo = new JPanel();
 		onetwo.setBorder(new EmptyBorder(0, 0, 0, 0));
@@ -161,7 +162,7 @@ public class View extends JFrame {
 					.addContainerGap(98, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap(430, Short.MAX_VALUE)
-					.addComponent(btnNextStep)
+					.addComponent(nextButton)
 					.addGap(30))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -194,7 +195,7 @@ public class View extends JFrame {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addComponent(onefour, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)))
 					.addGap(221)
-					.addComponent(btnNextStep)
+					.addComponent(nextButton)
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
@@ -208,6 +209,9 @@ public class View extends JFrame {
 		oneone.setVisible(false);
 		onetwo.setBackground(Color.blue);
 		onetwo.setSize(new Dimension(3, 23));
+	}
+	public void addENextListener(ActionListener nextButtonAction) {
+		nextButton.addActionListener(nextButtonAction);
 	}
 
 }
